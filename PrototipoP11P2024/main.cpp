@@ -57,7 +57,7 @@ void imprimirMatriz(int matriz[EQUIPOS][COLUMAS+1]){
 
     TablaGeneral T_general[EQUIPOS];
     LigaAscenso liga_asenso[EQUIPOS];
-    LigaSegunda liga_segunda[EQUIPOS]
+    LigaSegunda liga_segunda[EQUIPOS];
         bool repetir=true;
         char opcion;
 
@@ -104,10 +104,10 @@ for(int i =0;i<EQUIPOS;i++){
         liga_segunda[i].P2010=busquedaAleatorios( 1,MAX_VOTOS);
 
         liga_segunda[i].P2011=busquedaAleatorios( 1,MAX_VOTOS);
-        liga_segunda[i].p2012=busquedaAleatorios( 1,MAX_VOTOS);
-        liga_segunda[i].p2014=busquedaAleatorios( 1,MAX_VOTOS);
+        liga_segunda[i].P2012=busquedaAleatorios( 1,MAX_VOTOS);
+        liga_segunda[i].P2014=busquedaAleatorios( 1,MAX_VOTOS);
 
-        liga_segunda[i].Puntos=(liga_segunda[i].P2010+liga_segunda[i].P2011+liga_segunda[i].p2012+liga_segunda[i].p2014);
+        liga_segunda[i].Puntos=(liga_segunda[i].P2010+liga_segunda[i].P2011+liga_segunda[i].P2012+liga_segunda[i].P2014);
 
 
 
@@ -186,9 +186,9 @@ Equipo_Mayor2=liga_segunda[i].nombre;
 }
 //menor votos
 //----------------------------------------------------------------------------//----------------------------------------------------------------------------
-if (liga_asenso[i].Puntos<Mepuntos1){
-    Mepuntos1=liga_asenso[i].Puntos;
-    Equipo_Menor1=liga_asenso[i].nombre;
+if (liga_segunda[i].Puntos<Mepuntos2){
+    Mepuntos2=liga_segunda[i].Puntos;
+    Equipo_Menor2=liga_segunda[i].nombre;
 }
 
 }
@@ -214,6 +214,18 @@ cout<<setw(9)<<"Nombre /"<<setw(9)<<" Torneo 2010/"<<setw(15)<<"Torneo 2011/"<< 
     }
     cout<<"EL EQUIPO "<<Equipo_Mayor1 <<" TIENE  "<< Mpuntos1<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
     cout<<"EL EQUIPO "<<Equipo_Menor1 <<" TIENE "<<Mepuntos1<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
+
+
+//----------------------------------------------------------------------------------------------------
+cout<<setw(10)<<"------Historial Liga Segunda Division-----"<<endl<<endl;
+cout<<setw(9)<<"Nombre /"<<setw(9)<<" Torneo 2010/"<<setw(15)<<"Torneo 2011/"<< setw(9) << "Torneo 2012/" << setw(15) << "Torneo 2014/" << setw(15) << "PTS acumulados/" <<  endl<<endl;
+  cout<<"------------------------------------------------------------------------------------------"<<endl;
+    //for para imprimir los datos
+    for(int i=0;i<EQUIPOS;i++){
+     cout<<setw(9)<<liga_segunda[i].nombre<<setw(9)<<liga_segunda[i].P2010<<setw(15)<<liga_segunda[i].P2011<< setw(9) << liga_segunda[i].P2012 << setw(15) << liga_segunda[i].P2014 << setw(15) <<liga_segunda[i].Puntos <<  endl<<endl;
+    }
+    cout<<"EL EQUIPO "<<Equipo_Mayor2 <<" TIENE  "<< Mpuntos2<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
+    cout<<"EL EQUIPO "<<Equipo_Menor2<<" TIENE "<<Mepuntos2<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
 
 
 
