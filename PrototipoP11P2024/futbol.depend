@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1709064157 source:c:\users\victo\onedrive\escritorio\parcial1\ejrcicios p\futbol\main.cpp
+	<stdio.h>
+	<stdlib.h>
+	<unistd.h>
+	<string.h>
+	<iostream>
+	<iomanip>
+	<iomanip>
+
