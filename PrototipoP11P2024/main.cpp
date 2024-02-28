@@ -32,8 +32,15 @@ int P2012;
 int Puntos;
 
 };
-//La sección abarca una variedad de estructuras de control en programación
-//, comenzando con una introducción sobre su importancia. Se detallan las estructuras if, if...else y switch,
+struct LigaSegunda{
+string nombre;
+int P2010;
+int P2011;
+int P2014;
+int P2012;
+int Puntos;
+
+};
 
 int main()
 {
@@ -50,6 +57,7 @@ void imprimirMatriz(int matriz[EQUIPOS][COLUMAS+1]){
 
     TablaGeneral T_general[EQUIPOS];
     LigaAscenso liga_asenso[EQUIPOS];
+    LigaSegunda liga_segunda[EQUIPOS]
         bool repetir=true;
         char opcion;
 
@@ -86,21 +94,46 @@ for(int i =0;i<EQUIPOS;i++){
 
         liga_asenso[i].Puntos=(liga_asenso[i].P2010+liga_asenso[i].P2011+liga_asenso[i].P2012+liga_asenso[i].P2014);
 
+}
+//----------------------------------------------------------------------
+for(int i =0;i<EQUIPOS;i++){
+        cout<<"Equipo No " <<i+1 <<" de la tabla de Segunda Divison"<<endl;
+        cout<<"Nombre: ";
+        cin>>liga_segunda[i].nombre;
 
-        //-----------------------------------------------------------
+        liga_segunda[i].P2010=busquedaAleatorios( 1,MAX_VOTOS);
+
+        liga_segunda[i].P2011=busquedaAleatorios( 1,MAX_VOTOS);
+        liga_segunda[i].p2012=busquedaAleatorios( 1,MAX_VOTOS);
+        liga_segunda[i].p2014=busquedaAleatorios( 1,MAX_VOTOS);
+
+        liga_segunda[i].Puntos=(liga_segunda[i].P2010+liga_segunda[i].P2011+liga_segunda[i].p2012+liga_segunda[i].p2014);
 
 
-    }
+
+}
+
+
+
+
 int Mpuntos=0;
 int Mepuntos=100000000;
 string Equipo_Menor;
 string Equipo_Mayor;
 int suma=0;
+
 int Mpuntos1=0;
 int Mepuntos1=100000000;
 string Equipo_Menor1;
 string Equipo_Mayor1;
 int suma1=0;
+
+
+int Mpuntos2=0;
+int Mepuntos2=100000000;
+string Equipo_Menor2;
+string Equipo_Mayor2;
+int suma2=0;
 
 for(int i=0;i< EQUIPOS;i++){
 //acumulador de votos
@@ -131,6 +164,25 @@ suma1=suma1+liga_asenso[i].Puntos;
 if(liga_asenso[i].Puntos>Mpuntos1){
 Mpuntos1=liga_asenso[i].Puntos;
 Equipo_Mayor1=liga_asenso[i].nombre;
+}
+//menor votos
+//----------------------------------------------------------------------------//----------------------------------------------------------------------------
+if (liga_asenso[i].Puntos<Mepuntos1){
+    Mepuntos1=liga_asenso[i].Puntos;
+    Equipo_Menor1=liga_asenso[i].nombre;}
+}
+
+//tercer for
+//---------------------------------------------------------------
+for(int i=0;i< EQUIPOS;i++){
+//acumulador de votos
+suma2=suma2+liga_segunda[i].Puntos;
+
+//mayor votos//
+//----------------------------------------------------------------------------//----------------------------------------------------------------------------
+if(liga_segunda[i].Puntos>Mpuntos2){
+Mpuntos2=liga_segunda[i].Puntos;
+Equipo_Mayor2=liga_segunda[i].nombre;
 }
 //menor votos
 //----------------------------------------------------------------------------//----------------------------------------------------------------------------
