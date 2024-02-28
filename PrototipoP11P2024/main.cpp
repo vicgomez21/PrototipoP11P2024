@@ -1,3 +1,10 @@
+
+
+//VICTOR OMAR GOMEZ CARRASCOSA
+//9959-23-10733
+//CAMPEONATOS DE FUTBOL
+
+
 #include <stdio.h>      // Librería estándar de entrada y salida en C
 #include <stdlib.h>     // Librería estándar de funciones de utilidad en C
 #include <unistd.h>     // Librería estándar de funciones de sistema en POSIX (en este caso, getpid())
@@ -217,8 +224,8 @@ cout<<setw(9)<<"Nombre /"<<setw(9)<<" Torneo 2010/"<<setw(15)<<"Torneo 2011/"<< 
      cout<<setw(9)<<liga_asenso[i].nombre<<setw(9)<<liga_asenso[i].P2010<<setw(15)<<liga_asenso[i].P2011<< setw(9) << liga_asenso[i].P2012 << setw(15) << liga_asenso[i].P2014 << setw(15) <<liga_asenso[i].Puntos <<  endl<<endl;
     }
     cout<<"EL EQUIPO "<<Equipo_Mayor1 <<" TIENE  "<< Mpuntos1<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
-    cout<<"EL EQUIPO "<<Equipo_Menor1 <<" TIENE "<<Mepuntos1<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
-    cout<<"El PROMEDIO DE TODA LA LIGA NACIONAL ES : "<<promedio1<<endl<<endl;
+    cout<<"EL EQUIPO "<<Equipo_Menor1 <<" TIENE "<<Mepuntos1<<" PTS Y ES LA PUNTUACION MAS BAJA"<<endl<<endl;
+    cout<<"El PROMEDIO DE TODA LA LIGA DE ASCENSO ES : "<<promedio1<<endl<<endl;
 
 //----------------------------------------------------------------------------------------------------
 cout<<setw(10)<<"------Historial Liga Segunda Division-----"<<endl<<endl;
@@ -230,7 +237,7 @@ cout<<setw(9)<<"Nombre /"<<setw(9)<<" Torneo 2010/"<<setw(15)<<"Torneo 2011/"<< 
     }
     cout<<"EL EQUIPO "<<Equipo_Mayor2 <<" TIENE  "<< Mpuntos2<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
     cout<<"EL EQUIPO "<<Equipo_Menor2<<" TIENE "<<Mepuntos2<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
-cout<<"El PROMEDIO DE TODA LA LIGA NACIONAL ES : "<<promedio2<<endl<<endl;
+cout<<"El PROMEDIO DE TODA LA LIGA SEGUNDA DIVISION ES : "<<promedio2<<endl<<endl;
 
 
  cout << "Desea otro calculo (s/n)? ";
