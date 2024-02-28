@@ -121,19 +121,21 @@ int Mepuntos=100000000;
 string Equipo_Menor;
 string Equipo_Mayor;
 int suma=0;
+int promedio=0;
 
 int Mpuntos1=0;
 int Mepuntos1=100000000;
 string Equipo_Menor1;
 string Equipo_Mayor1;
 int suma1=0;
-
+int promedio1=0;
 
 int Mpuntos2=0;
 int Mepuntos2=100000000;
 string Equipo_Menor2;
 string Equipo_Mayor2;
 int suma2=0;
+int promedio2=0;
 
 for(int i=0;i< EQUIPOS;i++){
 //acumulador de votos
@@ -153,6 +155,7 @@ if (T_general[i].Puntos<Mepuntos){
 }
 
 }
+promedio=(suma/ EQUIPOS);
 //segundo for
 //-------------------------------------------------------------------
 for(int i=0;i< EQUIPOS;i++){
@@ -171,7 +174,7 @@ if (liga_asenso[i].Puntos<Mepuntos1){
     Mepuntos1=liga_asenso[i].Puntos;
     Equipo_Menor1=liga_asenso[i].nombre;}
 }
-
+promedio1=(suma1/ EQUIPOS);
 //tercer for
 //---------------------------------------------------------------
 for(int i=0;i< EQUIPOS;i++){
@@ -192,6 +195,7 @@ if (liga_segunda[i].Puntos<Mepuntos2){
 }
 
 }
+promedio2=(suma2/ EQUIPOS);
 //----------------------------------------------------------------------------//----------------------------------------------------------------------------
 cout<<setw(10)<<"------Historial Liga Nacional-----"<<endl<<endl;
 cout<<setw(9)<<"Nombre /"<<setw(9)<<" Torneo 2010/"<<setw(15)<<"Torneo 2011/"<< setw(9) << "Torneo 2012/" << setw(15) << "Torneo 2014/" << setw(15) << "PTS acumulados/" <<  endl<<endl;
@@ -201,8 +205,8 @@ cout<<setw(9)<<"Nombre /"<<setw(9)<<" Torneo 2010/"<<setw(15)<<"Torneo 2011/"<< 
      cout<<setw(9)<<T_general[i].nombre<<setw(9)<<T_general[i].P2010<<setw(15)<<T_general[i].P2011<< setw(9) << T_general[i].p2012 << setw(15) << T_general[i].p2014 << setw(15) <<T_general[i].Puntos <<  endl<<endl;
     }
     cout<<"EL EQUIPO "<<Equipo_Mayor <<" TIENE  "<< Mpuntos<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
-    cout<<"EL EQUIPO "<<Equipo_Menor <<" TIENE "<<Mepuntos<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
-
+    cout<<"EL EQUIPO "<<Equipo_Menor <<" TIENE "<<Mepuntos<<" PTS Y ES LA PUNTUACION MAS BAJA"<<endl<<endl;
+    cout<<"El PROMEDIO DE TODA LA LIGA NACIONAL ES : "<<promedio<<endl<<endl;
 
 //----------------------------------------------------------------------------------------------------------------
 cout<<setw(10)<<"------Historial Liga Ascenso-----"<<endl<<endl;
@@ -214,7 +218,7 @@ cout<<setw(9)<<"Nombre /"<<setw(9)<<" Torneo 2010/"<<setw(15)<<"Torneo 2011/"<< 
     }
     cout<<"EL EQUIPO "<<Equipo_Mayor1 <<" TIENE  "<< Mpuntos1<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
     cout<<"EL EQUIPO "<<Equipo_Menor1 <<" TIENE "<<Mepuntos1<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
-
+    cout<<"El PROMEDIO DE TODA LA LIGA NACIONAL ES : "<<promedio1<<endl<<endl;
 
 //----------------------------------------------------------------------------------------------------
 cout<<setw(10)<<"------Historial Liga Segunda Division-----"<<endl<<endl;
@@ -226,7 +230,7 @@ cout<<setw(9)<<"Nombre /"<<setw(9)<<" Torneo 2010/"<<setw(15)<<"Torneo 2011/"<< 
     }
     cout<<"EL EQUIPO "<<Equipo_Mayor2 <<" TIENE  "<< Mpuntos2<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
     cout<<"EL EQUIPO "<<Equipo_Menor2<<" TIENE "<<Mepuntos2<<" PTS Y ES LA PUNTUACION MAS ALTA"<<endl<<endl;
-
+cout<<"El PROMEDIO DE TODA LA LIGA NACIONAL ES : "<<promedio2<<endl<<endl;
 
 
  cout << "Desea otro calculo (s/n)? ";
